@@ -47,4 +47,9 @@ const startDir = process.argv[2] || '.'; // process.argv[2] captures the first a
 // Resolve the starting path to an absolute path for clarity in output
 const absoluteStartDir = path.resolve(startDir);
 
-console.log(`Searching for *${targetExtension} files in: ${absoluteStartDir}\
+console.log(`Searching for *${targetExtension} files in: ${absoluteStartDir}\n`);
+
+// Start the search
+findFilesByExtension(absoluteStartDir, targetExtension);
+
+console.log('\nSearch complete.');
